@@ -13,7 +13,7 @@ function App() {
     <>
         <h1>Explore Form React</h1>
       {/* <SimpleForm></SimpleForm> */}
-      <ActionForm></ActionForm>
+      {/* <ActionForm></ActionForm> */}
       <br />
       <Controlfield></Controlfield>
     
