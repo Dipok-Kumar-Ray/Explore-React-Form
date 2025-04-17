@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 
 const Controlfield = () => {
 
+    const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [email, setEmail] = useState('');
        
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('submitted');
+        console.log(name, email, password)
         if(password.length < 6){
             setError(' 6 characters or longer password needed');
         }
@@ -18,26 +20,49 @@ const Controlfield = () => {
 
     }
 
+
+    const handleNameChange = e => {
+        setName(e.target.value);
+    }
+
+    const handleEmailChange = e => {
+        setEmail(e.target.value);
+    }
+
+
+
     const handlePasswordOnChange = e =>{
         console.log(e.target.value);
         setPassword(e.target.value);
 
-        if(password.length <= 6)
-        {
-            setError('Password must be 6 characters or longer. ')
-        }
+        // if(password.length <= 6)
+        // {
+        //     setError('Password must be 6 characters or longer. ')
+        // }
 
-        else{
-            setError(' ');
-        }
+        // else{
+        //     setError(' ');
+        // }
     }
+
+    
 
     return (
         <div>
             <form  onSubmit={handleSubmit}>
-                <input type="email" placeholder='Enter your email : ' name="email" id="" required/>
+                <label>Name : </label>
+                <input type="text" name="name" placeholder='Enter your name : ' defaultValue={name} onChange={handleNameChange}  />
                 <br />
-                <input type="password" onChange={handlePasswordOnChange} defaultValue={password} name="password"  placeholder='Enter your password : '  id="" required/>
+                <label> Email : </label>
+                <input type="email" onChange={handleEmailChange} placeholder='Enter your email : ' name="email" defaultValue={handleEmailChange} required/>
+
+
+
+                <br />
+                <label> Password : </label>
+                <input type="password"  onChange={handlePasswordOnChange} defaultValue={password} name="password"  placeholder='Enter your password : '  required/>
+
+
                 <br />
                 <input type="submit" value="Submit"   />
             </form>
