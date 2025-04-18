@@ -20,7 +20,6 @@ const Controlfield = () => {
 
     }
 
-
     const handleNameChange = e => {
         setName(e.target.value);
     }
@@ -29,25 +28,12 @@ const Controlfield = () => {
         setEmail(e.target.value);
     }
 
-
-
     const handlePasswordOnChange = e =>{
         console.log(e.target.value);
         setPassword(e.target.value);
-
-        // if(password.length <= 6)
-        // {
-        //     setError('Password must be 6 characters or longer. ')
-        // }
-
-        // else{
-        //     setError(' ');
-        // }
     }
 
-    
-
-    return (
+   return (
         <div>
             <form  onSubmit={handleSubmit}>
                 <label>Name : </label>
@@ -55,8 +41,6 @@ const Controlfield = () => {
                 <br />
                 <label> Email : </label>
                 <input type="email" onChange={handleEmailChange} placeholder='Enter your email : ' name="email" defaultValue={handleEmailChange} required/>
-
-
 
                 <br />
                 <label> Password : </label>
