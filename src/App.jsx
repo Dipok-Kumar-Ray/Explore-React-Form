@@ -9,7 +9,7 @@ import SimpleForm from './SimpleForm/SimpleForm'
 function App() {
   return (
     <>
-        <h1>Explore Form React</h1>
+        {/* <h1>Explore Form React</h1> */}
       {/* <SimpleForm></SimpleForm> */}
       {/* <ActionForm></ActionForm> */}
       {/* <Controlfield></Controlfield> */}
