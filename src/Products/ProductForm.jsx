@@ -34,9 +34,11 @@ const ProductForm = ({handleAddProduct}) => {
         price,
         quantity
        }
-       
+       handleAddProduct(newProduct);
+
+
     //    console.log(newProduct);
-    handleAddProduct(newProduct);
+   
     // if(!error){
     //     handleAddProduct(newProduct);
     // }

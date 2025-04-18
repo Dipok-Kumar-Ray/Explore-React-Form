@@ -3,11 +3,11 @@ import ProductForm from './ProductForm';
 import ProductTable from './ProductTable';
 
 const ProductManagement = () => {
-    const [products, setProducst] = useState([]);
+    const [products, setProducts] = useState([]);
 
     const handleAddProduct = newProduct => {
         const newProducts = [...products, newProduct];
-        setProducst(newProducts);
+        setProducts(newProducts);
     }
 
     return (

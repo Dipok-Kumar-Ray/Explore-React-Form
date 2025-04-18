@@ -6,7 +6,7 @@ const ProductTable = ({products}) => {
             <h3>Products : {products.length} </h3>
             <table>
                 <thead>
-                    <tr>
+                    <tr style={{background:'blue' , color:'white' , padding: '5px'}}>
                         <th>No.</th>
                         <th>Product</th>
                         <th>Price</th>
@@ -15,7 +15,7 @@ const ProductTable = ({products}) => {
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody style={{background:'yellow', colo:'red'}}>
                 {
                     products.map((product,index) =>     <tr key={index}>
                     <td>{ index + 1 }</td>
